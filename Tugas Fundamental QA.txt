@@ -47,36 +47,36 @@ Test Report:
 -Feature: User Sign In
 -Description: Check When passing a correct username and password
 -Steps to Execute: 1. Enter valid username
-				   2. Enter correct password
-				   3. Click on Login Button
+		   2. Enter correct password
+		   3. Click on Login Button
 -Expected Result: User successfully login and direct to homepage
 --------------------------------------------------------------------------------------------------------------
 -ID: 02
 -Feature: User Sign In
 -Description: Check When passing a correct username and invalid password
 -Steps to Execute: 1. Enter valid username
-				   2. Enter incorrect password
-				   3. Click on Login Button
+		   2. Enter incorrect password
+		   3. Click on Login Button
 -Expected Result: User can not log in and show error message "Incorrect username or password."
 --------------------------------------------------------------------------------------------------------------
 -ID: 03
 -Feature: User Sign Up
 -Description: Check When user type email, username, password, Y/N, click puzzle picture, click Create Account
 -Steps to Execute: 1. Enter email
-				   2. Enter username
-				   3. Enter password
-				   4. Type Y/N
-				   5. Click puzzle picture
-				   6. Click on Create Account Button
+		   2. Enter username
+		   3. Enter password
+		   4. Type Y/N
+		   5. Click puzzle picture
+		   6. Click on Create Account Button
 -Expected Result: User successfully Sign Up/Create Account
 --------------------------------------------------------------------------------------------------------------
 -ID: 04
 -Feature: User Sign Up
 -Description: Check When user type incorrect email, username, password, Y/N, click puzzle picture, click Create Account
 -Steps to Execute: 1. Enter incorrect email
-				   2. Enter username
-				   3. Enter password
-				   4. Type Y/N
-				   5. Click puzzle picture
-				   6. Click on Create Account Button
+		   2. Enter username
+		   3. Enter password
+		   4. Type Y/N
+		   5. Click puzzle picture
+		   6. Click on Create Account Button
 -Expected Result: User can not Sign Up and show error message "Email is invalid"

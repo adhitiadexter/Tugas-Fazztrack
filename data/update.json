@@ -1,0 +1,14 @@
+{
+    "id": "6e42b695-fbb0-4447-b13f-48fa48fe8a0c",
+    "firstName": "Adhitia",
+    "lastName": "Panji",
+    "age": 21,
+    "occupation": "QA Manual",
+    "nationality": "Jepang",
+    "hobbies": [
+      "Hiking"
+    ],
+    "gender": "MALE",
+    "createdDate": "2022-08-12T18:34:34.6051358",
+    "updatedDate": "2022-08-12T18:34:34.6051358"
+  }

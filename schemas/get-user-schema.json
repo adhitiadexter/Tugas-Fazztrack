@@ -46,7 +46,7 @@
             "type": "string"
         },
         "updatedDate": {
-            "type": "string"
+            "type": ["string", "null"]
         }
     }
 }

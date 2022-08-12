@@ -4,12 +4,28 @@ const api = require('../api/FazztrackAPI');
 const scenario = require('../scenarios/update-user');
 const requestBody = require('../data/update.json');
 const schema = require('../schemas/update-user-schema.json');
+const requestBodyPost = require('../data/create-user.json');
+let userId = "";
 
 chai.use(require('chai-like'));
 chai.use(require('chai-things'));
 chai.use(require('chai-json-schema'));
 
 describe(`${scenario.testcase.description}`, async () => {
+    before(async () => {
+        console.log('Before Hook');
+        let response = await api.postUser(requestBodyPost);
+        expect(response.status).to.equal(200);
+        userId = response.body.id;
+    });
+
+    after(async () => {
+        console.log('After Hook');
+        let response = await api.deleteUser(userId);
+        expect(response.status).to.equal(200);
+    });
+
+
     it('[@update-user-api] | berhasil update data', async () => {
         let response = await api.putUser(requestBody);
         expect(response.status).to.equal(200);

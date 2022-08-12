@@ -3,14 +3,30 @@ const expect = chai.expect;
 const api = require('../api/FazztrackAPI');
 const requestBody = require('../data/get.json');
 const schema = require('../schemas/get-user-schema.json');
+const requestBodyPost = require('../data/create-user.json');
+let userId = "";
 
 chai.use(require('chai-like'));
 chai.use(require('chai-things'));
 chai.use(require('chai-json-schema'));
 
 describe('[@getuser] | Get User API Test', async () => {
+    before(async () => {
+        console.log('Before Hook');
+        let response = await api.postUser(requestBodyPost);
+        expect(response.status).to.equal(200);
+        userId = response.body.id;
+    });
+
+    after(async () => {
+        console.log('After Hook');
+        let response = await api.deleteUser(userId);
+        expect(response.status).to.equal(200);
+    });
+
+
     it('[@get-user-api1] | berhasil update data dengan id valid', async () => {
-        let response = await api.getUser('6e42b695-fbb0-4447-b13f-48fa48fe8a0c');
+        let response = await api.getUser(userId);
         expect(response.status).to.equal(200);
         expect(response.body).has.jsonSchema(schema);
         console.log(response.body);

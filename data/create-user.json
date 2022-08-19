@@ -1,0 +1,14 @@
+{
+    "id": "1122",
+    "firstName": "Adhitia",
+    "lastName": "Panji",
+    "age": 21,
+    "occupation": "QA",
+    "nationality": "Indonesia",
+    "hobbies": [
+      "Hiking"
+    ],
+    "gender": "MALE",
+    "createdDate": "2022-08-12T09:26:34.172Z",
+    "updatedDate": "2022-08-12T09:26:34.172Z"
+  }
